@@ -2,6 +2,12 @@
 
 ## Basics
 
+### AD DS Data Store
+
+-   Contains the NTDS.dit - a database that contains all of the information of an Active Directory domain controller as well as password hashes for domain users
+-   Stored by default in %SystemRoot%\NTDS
+-   accessible only by the domain controller
+
 ### User Types
 
 -   Domain Admins - This is the big boss: they control the domains and are the only ones with access to the domain controller.
@@ -31,3 +37,23 @@
 -   Enterprise Key Admins - Members of this group can perform administrative actions on key objects within the forest.
 -   Cloneable Domain Controllers - Members of this group that are domain controllers may be cloned.
 -   RAS and IAS Servers - Servers in this group can access remote access properties of users
+
+### Domain Trusts 
+-   Directional - The direction of the trust flows from a trusting domain to a trusted domain
+-   Transitive - The trust relationship expands beyond just two domains to include other trusted domains
+
+### Domain Services
+-   LDAP - Lightweight Directory Access Protocol; provides communication between applications and directory services
+-   Certificate Services - allows the domain controller to create, validate, and revoke public key certificates
+-   DNS, LLMNR, NBT-NS - Domain Name Services for identifying IP hostnames
+
+### Cloud vs On-Prem
+
+| On-Prem AD | Azure AD | 
+|--|--|
+| LDAP | Rest APIs |
+| NTLM | OAuth/SAML |
+| Kerberos | OpenID |
+| OU Tree | Flat Structure |
+|  Domains and Forests |  Tenants |
+|  Trusts | Guests |
