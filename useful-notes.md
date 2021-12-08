@@ -9,7 +9,7 @@ By pinging a target, can use this to ascertain whether a it's running Windows, L
 ```
 
 ### Windows
-In output, ttl=127 - this is a windows machine.
+In output, if ttl=64 to ttl=127 - this is a windows machine.
 ```bash:
 ┌──(kali㉿kali)-[~]
 └─$ ping 10.10.10.10
@@ -20,3 +20,7 @@ In output, ttl=127 - this is a windows machine.
   64 bytes from 10.10.10.10: icmp_seq=4 ttl=127 time=10.3 ms
   64 bytes from 10.10.10.10: icmp_seq=5 ttl=127 time=11.4 ms
 ```
+As one can see in the above.
+
+Else, if ttl=128 or greater, it's likely networking hardware such as a switch.
+And if ttl=63 or less, it's likely a linux machine.
