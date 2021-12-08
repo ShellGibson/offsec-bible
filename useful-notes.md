@@ -23,4 +23,6 @@ In output, if ttl=64 to ttl=127 - this is a windows machine.
 As one can see in the above.
 
 Else, if ttl=128 or greater, it's likely networking hardware such as a switch.
-And if ttl=63 or less, it's likely a linux machine.
+And if ttl=64 or less, it's likely a linux machine.
+
+**Though a lot of stuff runs GNU/Linux so don't automatically assume it's not networking hardware**
